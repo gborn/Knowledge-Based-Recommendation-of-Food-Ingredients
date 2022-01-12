@@ -14,8 +14,8 @@ def main():
 
     st.title('Knowledge Graph of Food Ingredients')
     # load items, and their vector embeddings
-    items = np.loadtxt('data/items.txt', dtype=str)
-    vectors = np.load('data/vectors.npy')
+    items = np.loadtxt('models/items.txt', dtype=str)
+    vectors = np.load('models/vectors.npy')
 
     # select ingredients
     selected_items = st.sidebar.multiselect('Select Ingredients', options=list(items))
@@ -35,7 +35,7 @@ def main():
     # select vector weights
     selected_weights = st.sidebar.radio('Choose weights', options=['Word2Vec', 'FastText'])
     if selected_weights:
-        vectors = np.load('data/ft_vectors.npy')
+        vectors = np.load('models/ft_vectors.npy')
 
     
     st.sidebar.markdown("## How it works? :tomato:")
