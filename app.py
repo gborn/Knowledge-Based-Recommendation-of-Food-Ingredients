@@ -14,7 +14,7 @@ def main():
 
     st.title('Knowledge Graph of Food Ingredients')
     # load items, and their vector embeddings
-    items = np.loadtxt('models/items.txt', dtype=str)
+    items = np.loadtxt('data/items.txt', dtype=str)
     vectors = np.load('models/vectors.npy')
 
     # select ingredients
